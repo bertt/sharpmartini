@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sharpmartini", "src\sharpmartini.csproj", "{1CB95426-7B83-42AD-9069-81D1700A7F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpmartini.tests", "sharpmartini.tests\sharpmartini.tests.csproj", "{C61814FD-8019-44CC-9F8B-B1999D62FF71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CB95426-7B83-42AD-9069-81D1700A7F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB95426-7B83-42AD-9069-81D1700A7F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB95426-7B83-42AD-9069-81D1700A7F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB95426-7B83-42AD-9069-81D1700A7F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A171E77-DB58-45C2-90E4-362D13A198E1}
+	EndGlobalSection
+EndGlobal
