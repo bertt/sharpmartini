@@ -46,7 +46,7 @@ namespace sharpmartini.demo.console
 
                 graphics.DrawLine(blackPen, new Point(v1.X, v1.Y), new Point(v2.X, v2.Y));
                 graphics.DrawLine(blackPen, new Point(v2.X, v2.Y), new Point(v3.X, v3.Y));
-                graphics.DrawLine(blackPen, new Point(v2.X, v2.Y), new Point(v1.X, v1.Y));
+                graphics.DrawLine(blackPen, new Point(v3.X, v3.Y), new Point(v1.X, v1.Y));
             }
 
             fuji.Save($"test_{maxError}.png", ImageFormat.Png);

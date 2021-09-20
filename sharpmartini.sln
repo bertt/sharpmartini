@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sharpmartini.tests", "sharp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{EF5274D6-42A7-44E2-813F-AFD1327256AE}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\aaa\fuji_100.png = ..\..\..\..\aaa\fuji_100.png
+		fuji_100.png = fuji_100.png
 		README.md = README.md
 	EndProjectSection
 EndProject
