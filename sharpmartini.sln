@@ -5,7 +5,17 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sharpmartini", "src\sharpmartini.csproj", "{1CB95426-7B83-42AD-9069-81D1700A7F96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpmartini.tests", "sharpmartini.tests\sharpmartini.tests.csproj", "{C61814FD-8019-44CC-9F8B-B1999D62FF71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sharpmartini.tests", "sharpmartini.tests\sharpmartini.tests.csproj", "{C61814FD-8019-44CC-9F8B-B1999D62FF71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{EF5274D6-42A7-44E2-813F-AFD1327256AE}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\aaa\fuji_100.png = ..\..\..\..\aaa\fuji_100.png
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{DF70CA44-6CE6-4CFA-BAE6-ADA1F71291C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpmartini.demo.console", "sharpmartini.demo.console\sharpmartini.demo.console.csproj", "{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +31,16 @@ Global
 		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C61814FD-8019-44CC-9F8B-B1999D62FF71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7} = {DF70CA44-6CE6-4CFA-BAE6-ADA1F71291C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A171E77-DB58-45C2-90E4-362D13A198E1}
