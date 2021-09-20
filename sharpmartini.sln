@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{DF70
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpmartini.demo.console", "sharpmartini.demo.console\sharpmartini.demo.console.csproj", "{3213EEF2-424A-4BA7-B4FB-39BBDF808AA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpmartini.benchmarkting", "sharpmartini.benchmarkting\sharpmartini.benchmarkting.csproj", "{ED4356E0-0EFF-4B55-BD90-C3F767229C8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpmartini.benchmarking", "sharpmartini.benchmarkting\sharpmartini.benchmarking.csproj", "{ED4356E0-0EFF-4B55-BD90-C3F767229C8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
