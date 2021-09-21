@@ -1,8 +1,11 @@
-﻿using System;
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Drawing.Processing;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
+using System.IO;
 
 namespace sharpmartini.demo.console
 {
@@ -11,7 +14,7 @@ namespace sharpmartini.demo.console
         static void Main(string[] args)
         {
             ushort maxError = 100;
-            var fuji = new Bitmap(@"fixtures/fuji.png");
+            var fuji = Image.Load<Rgba32>(@"fixtures/fuji.png");
 
             var sw = new Stopwatch();
             sw.Start();
@@ -34,22 +37,31 @@ namespace sharpmartini.demo.console
             }
 
             var vertices = vertices1.ToArray();
+            var pen = Pens.Solid(Color.Black, 1);
 
-            var graphics = Graphics.FromImage(fuji);
-            var blackPen = new Pen(Color.Black, 1);
-
-            for (var j = 0; j < mesh.triangles.Length / 3; j++)
+            fuji.Mutate(imageContext =>
             {
-                var v1 = vertices[mesh.triangles[j * 3]];
-                var v2 = vertices[mesh.triangles[j * 3 + 1]];
-                var v3 = vertices[mesh.triangles[j * 3 + 2]];
+                for (var j = 0; j < mesh.triangles.Length / 3; j++)
+                {
+                    var v1 = vertices[mesh.triangles[j * 3]];
+                    var v2 = vertices[mesh.triangles[j * 3 + 1]];
+                    var v3 = vertices[mesh.triangles[j * 3 + 2]];
 
-                graphics.DrawLine(blackPen, new Point(v1.X, v1.Y), new Point(v2.X, v2.Y));
-                graphics.DrawLine(blackPen, new Point(v2.X, v2.Y), new Point(v3.X, v3.Y));
-                graphics.DrawLine(blackPen, new Point(v3.X, v3.Y), new Point(v1.X, v1.Y));
+
+                    var line = new List<PointF>();
+                    line.Add(new PointF(v1.X, v1.Y));
+                    line.Add(new PointF(v2.X, v2.Y));
+                    line.Add(new PointF(v3.X, v3.Y));
+                    line.Add(new PointF(v1.X, v1.Y));
+
+                    imageContext.DrawLines(pen,line.ToArray());
+                }
+            });
+
+            using (var file = File.Create("DrawLinesTest.png"))
+            {
+                fuji.SaveAsPng(file);
             }
-
-            fuji.Save($"test_{maxError}.png", ImageFormat.Png);
         }
     }
 }

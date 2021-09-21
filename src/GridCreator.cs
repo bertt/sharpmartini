@@ -1,10 +1,11 @@
-﻿using System.Drawing;
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 
 namespace sharpmartini
 {
     public static class GridCreator
     {
-        public static float[] MapboxTerrainToGrid(Bitmap png)
+        public static float[] MapboxTerrainToGrid(Image<Rgba32> png)
         {
             var gridSize = png.Width + 1;
             var terrain = new float[gridSize * gridSize];
@@ -12,9 +13,11 @@ namespace sharpmartini
 
             for (var y = 0; y < tileSize; y++)
             {
+                var pixelRowSpan = png.GetPixelRowSpan(y);
                 for (var x = 0; x < tileSize; x++)
                 {
-                    var pixel = png.GetPixel(x, y);
+                    var s = png[x, y];
+                    var pixel = pixelRowSpan[x];
                     var r = pixel.R;
                     var g = pixel.G;
                     var b = pixel.B;

@@ -1,6 +1,7 @@
-﻿using System;
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using System;
 using System.Diagnostics;
-using System.Drawing;
 
 namespace sharpmartini.benchmarkting
 {
@@ -8,7 +9,7 @@ namespace sharpmartini.benchmarkting
     {
         static void Main(string[] args)
         {
-            var png = new Bitmap(@"fixtures/fuji.png");
+            var png = Image.Load<Rgba32>(@"fixtures/fuji.png");
             var terrain = GridCreator.MapboxTerrainToGrid(png);
             var sw = new Stopwatch();
 

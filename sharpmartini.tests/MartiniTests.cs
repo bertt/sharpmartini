@@ -1,7 +1,8 @@
 using NUnit.Framework;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using System;
 using System.Diagnostics;
-using System.Drawing;
 
 namespace sharpmartini.tests
 {
@@ -12,7 +13,8 @@ namespace sharpmartini.tests
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            var fuji = new Bitmap(@"fixtures/fuji.png");
+            var fuji = Image.Load<Rgba32>(@"fixtures/fuji.png");
+            
             Assert.IsTrue(fuji.Width == 512);
             Assert.IsTrue(fuji.Height == 512);
             var terrain = GridCreator.MapboxTerrainToGrid(fuji);
