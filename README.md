@@ -6,6 +6,19 @@ Sample result of Fuji terrain with MaxError = 100 (see sharpmartini.demo.console
 
 ![alt text](fuji_100.png "Fuji")
 
+## Benchmark
+
+Prerequisite: Install .NET 5
+
+```
+$ git clone https://github.com/bertt/sharpmartini
+$ cd sharpmartini.benchmark
+$ dotnet run
+init tileset: 75ms
+create tile: 35ms
+mesh (maxError = 30): 72ms
+vertices: 9700, triangles: 19078
+```
 
 ## License
 
